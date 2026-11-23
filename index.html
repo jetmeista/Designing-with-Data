@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's That Pokémon?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <h1>Who's That Pokémon?</h1>
+        <p class="intro">Guess the Pokémon from its silhouette!</p>
+
+        <div class="scoreboard">
+            <span>Score: <strong id="score">0</strong></span>
+            <span>Round: <strong id="round">1</strong></span>
+        </div>
+
+        <div class="picture-box" id="pictureBox">
+            <img id="pokemonImage" class="hidden" alt="Mystery Pokémon" src="">
+        </div>
+
+        <p id="message" aria-live="polite">Loading Pokémon...</p>
+        <p id="hintText"></p>
+
+        <form id="guessForm">
+            <input type="text" id="guessInput" placeholder="Enter Pokémon name" autocomplete="off" required>
+            <button type="submit" id="guessButton">Guess</button>
+        </form>
+
+        <div class="buttons">
+            <button type="button" id="hintButton">Hint</button>
+            <button type="button" id="revealButton">Reveal</button>
+            <button type="button" id="nextButton">Next Pokémon</button>
+        </div>
+
+        <div id="pokemonInfo"></div>
+        <p class="credit">Pokémon data and artwork from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
